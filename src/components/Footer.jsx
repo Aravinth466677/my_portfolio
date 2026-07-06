@@ -1,6 +1,14 @@
 import { motion } from 'framer-motion';
 import { GitFork, Mail, ArrowUp } from 'lucide-react';
 
+const LinkedInIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+    <rect x="2" y="9" width="4" height="12"/>
+    <circle cx="4" cy="4" r="2"/>
+  </svg>
+);
+
 export default function Footer() {
   return (
     <footer style={{ borderTop: '1px solid var(--border)', padding: '2rem 2rem', maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
@@ -18,6 +26,7 @@ export default function Footer() {
       <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
         {[
           { icon: <GitFork size={15} />, href: 'https://github.com/Aravinth466677' },
+          { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/aravinth-v-dev/' },
           { icon: <Mail size={15} />, href: 'mailto:aravinthviswa4@gmail.com' },
         ].map(({ icon, href }, i) => (
           <motion.a key={i} href={href} target="_blank" rel="noreferrer"

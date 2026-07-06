@@ -1,12 +1,21 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, GitFork, Send, ArrowUpRight } from 'lucide-react';
+
+const LinkedInIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+    <rect x="2" y="9" width="4" height="12"/>
+    <circle cx="4" cy="4" r="2"/>
+  </svg>
+);
 import { SectionLabel } from './About';
 
 const contacts = [
   { icon: <Mail size={16} />, label: 'Email', value: 'aravinthviswa4@gmail.com', href: 'mailto:aravinthviswa4@gmail.com' },
   { icon: <Phone size={16} />, label: 'Phone', value: '+91 90809 68033', href: 'tel:+919080968033' },
   { icon: <GitFork size={16} />, label: 'GitHub', value: 'Aravinth466677', href: 'https://github.com/Aravinth466677' },
+  { icon: <LinkedInIcon />, label: 'LinkedIn', value: 'aravinth-v-dev', href: 'https://www.linkedin.com/in/aravinth-v-dev/' },
 ];
 
 export default function Contact() {
@@ -67,7 +76,7 @@ export default function Contact() {
                   initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                   whileHover={{ background: 'rgba(0,255,179,0.05)', paddingLeft: '1.75rem' }}
-                  style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.25rem 1.5rem', background: 'var(--card)', borderBottom: i < 2 ? '1px solid var(--border)' : 'none', color: 'inherit', transition: 'all 0.25s' }}>
+                  style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.25rem 1.5rem', background: 'var(--card)', borderBottom: i < 3 ? '1px solid var(--border)' : 'none', color: 'inherit', transition: 'all 0.25s' }}>
                   <div style={{ width: 36, height: 36, borderRadius: '8px', background: 'rgba(0,255,179,0.08)', color: 'var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>{icon}</div>
                   <div>
                     <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>{label}</div>

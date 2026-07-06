@@ -2,6 +2,14 @@ import { useEffect, useState, useRef } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { ArrowRight, GitFork, Mail } from 'lucide-react';
 
+const LinkedInIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+    <rect x="2" y="9" width="4" height="12"/>
+    <circle cx="4" cy="4" r="2"/>
+  </svg>
+);
+
 const roles = ['Software Developer', 'React Developer', 'Frontend Engineer', 'Full Stack Builder', 'UI/UX Craftsman'];
 
 const codeLines = [
@@ -128,6 +136,7 @@ export default function Hero() {
             style={{ display: 'flex', gap: '0.75rem' }}>
             {[
               { label: 'GitHub', href: 'https://github.com/Aravinth466677', icon: <GitFork size={16} /> },
+              { label: 'LinkedIn', href: 'https://www.linkedin.com/in/aravinth-v-dev/', icon: <LinkedInIcon /> },
               { label: 'Email', href: 'mailto:aravinthviswa4@gmail.com', icon: <Mail size={16} /> },
             ].map(({ label, href, icon }) => (
               <motion.a key={label} href={href} target="_blank" rel="noreferrer"
