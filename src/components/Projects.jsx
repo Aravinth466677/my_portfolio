@@ -21,10 +21,10 @@ const projects = [
     color: '#00d4ff',
   },
   {
-    num: '03', id: 'task-manager', icon: <CheckSquare size={18} />, title: 'Task Manager',
+    num: '03', id: 'task-manager', icon: <CheckSquare size={18} />, title: 'Task Manager Platform',
     subtitle: 'Full Stack Spring Boot App',
-    description: 'Full-stack task management app with React frontend and Spring Boot REST API. Features task creation, status tracking, and a clean responsive UI.',
-    stack: ['React.js', 'Spring Boot', 'Java', 'REST APIs'],
+    description: 'Designed and developed a full-stack task management application using React.js and Spring Boot. Implemented JWT-based authentication, CRUD operations, and integrated user-facing components with server-side logic. Tested, debugged, and maintained application functionality while managing persistent PostgreSQL data through REST APIs.',
+    stack: ['Spring Boot', 'React.js', 'PostgreSQL', 'JWT'],
     live: 'https://task-manager-frontend-iota-vert.vercel.app/',
     github: 'https://github.com/Aravinth466677/task_manager_frontend.git',
     githubBackend: 'https://github.com/Aravinth466677/TaskManager_spring_boot.git',
